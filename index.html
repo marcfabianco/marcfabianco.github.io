@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marcos Fabian Covarrubias — Policy Economist</title>
+  <meta name="description" content="Policy economist and Ph.D. candidate at the University of Maryland. Research on human capital, education, health, labor, and climate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">MFC</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-photo" src="assets/MFC_circle.png" alt="Marcos Fabian Covarrubias" />
+      <div class="hero-text">
+        <p class="eyebrow">Policy Economist</p>
+        <h1>Marcos Fabian<br/>Covarrubias</h1>
+        <p class="tagline">Human capital &middot; Education &middot; Health &middot; Labor &middot; Climate</p>
+        <p class="affiliation">Ph.D. Candidate, School of Public Policy · University of Maryland</p>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>
+        I build large-scale empirical studies that link climate and economic shocks to human-capital outcomes —
+        births, child health, learning, and labor mobility — using administrative microdata across the U.S. and Mexico.
+        Before my Ph.D., I spent five years leading policy research at international institutions in Basel and Mexico City.
+        I care about reproducibility, and I orchestrate LLM agents across my research pipelines.
+      </p>
+    </section>
+
+    <section id="research" class="research">
+      <h2>Research</h2>
+      <div class="cards">
+        <article class="card card--terracotta">
+          <h3>Climate shocks and children's outcomes</h3>
+          <p>How heat, drought, and wildfire smoke shape birth outcomes, infant health, and student performance — linking administrative records to climate and pollution data across thousands of U.S. and Mexican counties.</p>
+        </article>
+        <article class="card card--gold">
+          <h3>Barriers to mobility within countries</h3>
+          <p>What holds workers back from moving to higher-return sectors and regions — disentangling selection on human capital from sector-specific returns to schooling using Mexican panel microdata.</p>
+        </article>
+        <article class="card card--sage">
+          <h3>AI-augmented research workflows</h3>
+          <p>Agent-ready repository structures and custom skills so LLMs can run code, manage data pipelines, review analysis, and synthesize literature alongside me.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Elsewhere</h2>
+      <ul class="links">
+        <li><span class="label">Writing</span><a href="https://marcfabianco.substack.com">marcfabianco.substack.com</a></li>
+        <li><span class="label">Email</span><a href="mailto:mfbnco@gmail.com">mfbnco@gmail.com</a></li>
+        <li><span class="label">GitHub</span><a href="https://github.com/marcfabianco">github.com/marcfabianco</a></li>
+        <li><span class="label">UMD SPP</span><a href="https://spp.umd.edu/our-community/faculty-staff/marcos-fabian">faculty page</a></li>
+        <li><span class="label">HOWL</span><a href="https://howl.umd.edu">howl.umd.edu</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Marcos Fabian Covarrubias</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
