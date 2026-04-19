@@ -7,21 +7,32 @@
   <meta name="description" content="Policy economist and Ph.D. candidate at the University of Maryland. Research on human capital, education, health, labor, and climate." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">MFC</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main id="top">
+  <aside class="gutter">
+    <div class="gutter-inner">
+      <a class="brand" href="#top">MFC</a>
+
+      <nav class="gutter-nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#policy">Policy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <span class="pink-rule" aria-hidden="true"></span>
+
+      <a class="writing-label" href="https://marcfabianco.substack.com">
+        Writing <span class="dot">·</span> marcfabianco.substack.com <span class="arrow">→</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="content" id="top">
+
     <section class="hero">
       <img class="hero-photo" src="assets/MFC_circle.png" alt="Marcos Fabian Covarrubias" />
       <div class="hero-text">
@@ -34,48 +45,58 @@
 
     <section id="about" class="about">
       <h2>About</h2>
-      <p>
-        I build large-scale empirical studies that link climate and economic shocks to human-capital outcomes —
-        births, child health, learning, and labor mobility — using administrative microdata across the U.S. and Mexico.
-        Before my Ph.D., I led a multi-country research program at the Association of Supervisors of Banks of the Americas
-        in Mexico City, and was a research fellow at the Bank for International Settlements in Basel.
-        I care about reproducibility, and I orchestrate LLM agents across my research pipelines.
+      <p class="lead">
+        <span class="dropcap">I</span> build large-scale empirical studies that link climate and economic shocks to human-capital outcomes — births, child health, learning, and labor mobility — using administrative microdata across the U.S. and Mexico. Before my Ph.D., I led a multi-country research program at the Association of Supervisors of Banks of the Americas in Mexico City, and was a research fellow at the Bank for International Settlements in Basel. I care about reproducibility, and I orchestrate LLM agents across my research pipelines.
       </p>
     </section>
 
     <section id="research" class="research">
       <h2>Research</h2>
-      <div class="cards">
-        <article class="card card--terracotta">
-          <h3>Climate shocks and children's outcomes</h3>
-          <p>How heat, drought, and wildfire smoke shape birth outcomes, infant health, and student performance — linking administrative records to climate and pollution data across thousands of U.S. and Mexican counties.</p>
-        </article>
-        <article class="card card--gold">
-          <h3>Barriers to mobility within countries</h3>
-          <p>What holds workers back from moving to higher-return sectors and regions — disentangling selection on human capital from sector-specific returns to schooling using Mexican panel microdata.</p>
-        </article>
-        <article class="card card--sage">
-          <h3>AI-augmented research workflows</h3>
-          <p>Agent-ready repository structures and custom skills so LLMs can run code, manage data pipelines, review analysis, and synthesize literature alongside me.</p>
-        </article>
-      </div>
+
+      <h3 class="subsection">Working papers</h3>
+      <ol class="papers">
+        <li>
+          <p class="paper-title"><a href="https://ceey.org.mx/uso-de-tiempo-salud-mental-y-gasto-del-hogar-los-efectos-de-ser-cuidador-en-la-movilidad-social-en-nuevo-leon/">Time Use, Mental Health, and Household Spending: The Effects of Caregiving on Social Mobility in Nuevo León</a></p>
+          <p class="paper-authors">Susan W. Parker and Marcos Fabian Covarrubias</p>
+          <p class="paper-venues"><span class="venue-label">Published as</span> CEEY Working Paper No. 10/2025</p>
+        </li>
+      </ol>
+
+      <h3 class="subsection">Work in progress</h3>
+      <ol class="papers">
+        <li>
+          <p class="paper-title">Heat and Learning: Large-Scale Evidence on Heterogeneous Impacts Across Mexico</p>
+          <p class="paper-authors">Gabriel Cruz and Marcos Fabian Covarrubias</p>
+          <p class="paper-venues"><span class="venue-label">Presented at</span> RIDGE Forum 2025 (Montevideo) · CESifo 2025</p>
+          <p class="paper-venues"><span class="venue-label">Upcoming</span> Royal Economic Society Conference 2026 (Newcastle, UK)</p>
+        </li>
+        <li>
+          <p class="paper-title">Protecting Maternal and Infant Health from Drought: The Role of Social Safety Nets</p>
+          <p class="paper-authors">[coauthors — TBD] and Marcos Fabian Covarrubias</p>
+          <p class="paper-venues"><span class="venue-label">Presented at</span> ASHEcon 2025</p>
+          <p class="paper-venues"><span class="venue-label">Upcoming</span> Population Association of America (PAA) 2026</p>
+        </li>
+        <li>
+          <p class="paper-title">Measuring Barriers to Structural Transformation: A Within-Country Perspective from Mexico</p>
+          <p class="paper-authors">[coauthors — TBD?] Marcos Fabian Covarrubias</p>
+          <p class="paper-venues"><span class="venue-label">Presented at</span> TIDES 2026 (Towson) · DevSouth 2026 (Duke)</p>
+        </li>
+        <li>
+          <p class="paper-title">Prenatal Exposure to Wildfire Smoke and Infant Health: Evidence from a Nationwide Analysis</p>
+          <p class="paper-authors">Michel Boudreaux, [first name] Yoder, Marcos Fabian Covarrubias, [first name] Ellicott, and [first name] He</p>
+          <p class="paper-venues"><span class="venue-label">Presentations</span> [venues TBD]</p>
+        </li>
+      </ol>
     </section>
 
-    <section id="work" class="work">
-      <h2>Selected work</h2>
+    <section id="policy" class="policy">
+      <h2>Policy work</h2>
       <ul class="pubs">
         <li>
-          <p class="pub-title">
-            <a href="https://ceey.org.mx/uso-de-tiempo-salud-mental-y-gasto-del-hogar-los-efectos-de-ser-cuidador-en-la-movilidad-social-en-nuevo-leon/">Time Use, Mental Health, and Household Spending: The Effects of Caregiving on Social Mobility in Nuevo León</a>
-          </p>
-          <p class="pub-meta">Parker &amp; Fabian · CEEY Working Paper No. 10/2025</p>
-        </li>
-        <li>
-          <p class="pub-title">Policy work on the regulation of big technology firms in finance</p>
-          <p class="pub-meta">Co-authored BIS publications (FSI Insights No. 44; FSI Briefs No. 12) · Bank for International Settlements, 2020</p>
+          <p class="pub-title">Regulation of big technology firms in finance</p>
+          <p class="pub-meta">Co-authored BIS publications · FSI Insights No. 44 and FSI Briefs No. 12 · Bank for International Settlements, 2020</p>
         </li>
       </ul>
-      <p class="pubs-note">Working papers and ongoing research not listed here. Public code repositories will be linked as projects reach a shareable state.</p>
     </section>
 
     <section id="contact" class="contact">
@@ -88,11 +109,12 @@
         <li><span class="label">HOWL</span><a href="https://howl.umd.edu">howl.umd.edu</a></li>
       </ul>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Marcos Fabian Covarrubias</p>
-  </footer>
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Marcos Fabian Covarrubias</p>
+    </footer>
+
+  </main>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
