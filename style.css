@@ -25,7 +25,7 @@
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 
   --gutter-width: 140px;
-  --pink-width: 72px;
+  --pink-width: 100px;
   --content-max: 780px;
 }
 
@@ -105,25 +105,38 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   transform: rotate(180deg);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  padding: 40px 0;
+  padding: 48px 0;
 }
 .pink-band-link:hover { color: var(--terracotta); text-decoration: none; }
-.pink-band-link .dot { color: var(--terracotta); margin: 0 8px; }
-.pink-band-link .arrow { margin-left: 10px; color: var(--terracotta); }
+.pink-band-link .dot { color: var(--terracotta); margin: 0 10px; }
+.pink-band-link .arrow { margin-left: 12px; color: var(--terracotta); font-size: 17px; }
 
-/* ===== Main content ===== */
+/* ===== Main content (centered in the middle zone) =====
+   The content wrapper fills the space between the left gutter and the right
+   pink band. Each section has its own max-width for comfortable reading
+   measure (~65–75ch), and `align-items: center` centers the sections inside
+   the middle zone so there is no dead space next to the pink band.
+*/
 .content {
   margin-left: var(--gutter-width);
   margin-right: var(--pink-width);
-  padding: 0 80px;
+  padding: 0 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-section { padding: 72px 0; border-top: 1px solid rgba(153,153,153,0.2); }
-section.hero { border-top: none; padding-top: 80px; }
+section {
+  width: 100%;
+  max-width: var(--content-max);
+  padding: 72px 0;
+  border-top: 1px solid rgba(153,153,153,0.2);
+}
+section.hero { border-top: none; padding-top: 72px; }
 
 h2 {
   font-family: var(--serif);
@@ -145,14 +158,13 @@ h2::after {
 /* ===== Hero ===== */
 .hero {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
+  grid-template-columns: 180px 1fr;
+  gap: 36px;
   align-items: center;
-  max-width: calc(var(--content-max) + 200px);
 }
 .hero-photo {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--white);
@@ -346,6 +358,7 @@ h2::after {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-top: 1px solid rgba(153,153,153,0.2);
+  width: 100%;
   max-width: var(--content-max);
 }
 
