@@ -197,6 +197,15 @@ h2::after {
   color: var(--warm-gray);
   font-size: 14.5px;
 }
+.hero-email {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+}
+.hero-email a {
+  color: var(--warm-gray);
+  border-bottom: 1px solid var(--terracotta);
+}
+.hero-email a:hover { color: var(--terracotta); text-decoration: none; }
 
 /* ===== About ===== */
 .about .lead {
