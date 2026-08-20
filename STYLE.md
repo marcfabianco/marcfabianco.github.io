@@ -48,7 +48,7 @@ Weights in use: 400 for body, 600 for headings and labels.
 
 | Token      | Size    | Weight | Use                                              |
 |------------|---------|--------|--------------------------------------------------|
-| Brand      | 16px    | 600    | Masthead name, 0.6px letter-spacing              |
+| Brand      | 18px    | 600    | Masthead name, 0.6px letter-spacing              |
 | H2         | 20px    | 600    | Section headings                                 |
 | Item title | 17px    | 600    | Paper and publication titles                     |
 | Body       | 16px    | 400    | Paragraphs                                       |
