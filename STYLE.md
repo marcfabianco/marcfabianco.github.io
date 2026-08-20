@@ -39,46 +39,50 @@ This document defines the stylistic system for all public-facing materials (webs
 
 ### Families
 
-- **Serif (display):** Cormorant Garamond — weights 500, 600, 700. Fallback: Georgia, "Times New Roman", serif.
-- **Sans (body/UI):** Inter — weights 400, 500, 600. Fallback: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif.
+- **Sans (everything):** the system UI stack — `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Lucida Grande", Arial, sans-serif`. No webfont is loaded. The site renders in the reader's native interface font.
+- **Serif (optional accent):** Georgia, Times, serif. Available for pull quotes and long-form editorial pages. Not used on the main site.
+
+Weights in use: 400 for body, 600 for headings and labels.
 
 ### Scale
 
-| Token     | Size  | Family | Weight | Use                                |
-|-----------|-------|--------|--------|-------------------------------------|
-| Hero H1   | 56px  | Serif  | 600    | Name / primary hero title          |
-| H2        | 32px  | Serif  | 600    | Section headings                   |
-| H3        | 21px  | Serif  | 600    | Card / item titles                 |
-| Body      | 17px  | Sans   | 400    | Paragraphs                         |
-| Body lg   | 18px  | Sans   | 400    | About paragraph, lead text         |
-| Meta      | 14–15px | Sans | 400    | Captions, metadata, secondary text |
-| Eyebrow   | 13px  | Sans   | 600    | Uppercase label above title, 3px letter-spacing |
-| Tagline   | 20px  | Serif italic | 500 | Subtitle under hero name        |
+| Token      | Size    | Weight | Use                                              |
+|------------|---------|--------|--------------------------------------------------|
+| Brand      | 16px    | 600    | Masthead name, 0.6px letter-spacing              |
+| H2         | 20px    | 600    | Section headings                                 |
+| Item title | 17px    | 600    | Paper and publication titles                     |
+| Body       | 16px    | 400    | Paragraphs                                       |
+| Meta       | 14px    | 400    | Authors, captions, secondary text                |
+| Venue      | 13px    | 400    | Venue and status lines, light gray               |
+| Label      | 11-12px | 600    | Uppercase section labels and nav, 2-2.5px letter-spacing |
 
 ### Rules
 
-- **Serif for anything that reads as a title.** Sans for anything that reads as UI or running prose.
-- **Letter-spacing:** eyebrow labels 3px, nav links 0.5px, brand mark 2px. Body text uses default tracking.
-- **Line height:** body 1.6, headings 1.05–1.3 (tighter for larger sizes).
-- **Italics:** reserved for taglines, meta text, and the "note" paragraph at section ends.
-
----
+- **One family.** Size, weight, and letter-spacing carry the hierarchy. No display face.
+- **Letter-spacing:** uppercase labels 2-2.5px, brand mark 0.6px. Body text uses default tracking.
+- **Line height:** body 1.6, titles 1.35.
+- **Uppercase letter-spaced labels** are the main structural signal, replacing the old serif section headings.
+- **Italics:** sparing. Meta text and the occasional note.
 
 ## 3. Layout
 
-- **Max content width:** 960px. Centered, 32px side padding.
-- **Section vertical padding:** 64px top/bottom.
+- **Max content width:** 900px, centered in the zone left of the pink band, 40px side padding.
+- **Right band:** 130px fixed soft-pink column, full height, vertical Substack link. Becomes a horizontal strip at the breakpoint.
+- **Masthead:** name on the left, uppercase nav on the right, 20px vertical padding, 1px bottom border.
+- **Section vertical padding:** 40px top and bottom. Keep it tight. Whitespace comes from line height, not from padding.
 - **Section divider:** 1px top border `rgba(153,153,153,0.25)`. First section has no top border.
-- **H2 underline:** 44px × 3px terracotta bar, 12px below the heading text.
-- **Cards:** white surface, 4px colored top border (one of terracotta / gold / sage), 28px × 24px padding, 4px corner radius, subtle shadow `0 2px 10px rgba(51,51,51,0.05)`. On hover: lift 3px and shadow deepens.
-- **Breakpoint:** single-column layout at ≤ 760px. Hero photo centers, grid collapses to one column.
+- **No decorative heading rules.** The terracotta bar under H2 is retired.
+- **Lists are unnumbered.** No counters, no leading-zero indices.
+- **Item metadata is a single line**, middle-dot separated. No definition lists, no bordered metadata blocks.
+- **Cards:** white surface, 4px colored top border (one of terracotta / gold / sage), 28px x 24px padding, 4px corner radius, subtle shadow `0 2px 10px rgba(51,51,51,0.05)`. On hover: lift 3px and shadow deepens.
+- **Breakpoint:** single column at <= 860px. Portrait centers above the text, grids collapse.
 
 ---
 
 ## 4. Imagery
 
-- **Portrait:** circular crop, transparent background PNG, white 4px ring, soft shadow `0 6px 24px rgba(51,51,51,0.12)`. Default size 220px in hero; 170px in compact contexts.
-- **Source photo:** `MFC.jpg` (original). Always center-cropped to square, then circular-masked. Never stretched.
+- **Portrait:** circular crop, transparent background PNG, white 4px ring, soft shadow `0 6px 24px rgba(51,51,51,0.12)`. Default size 280px in the intro block; 200px at the mobile breakpoint.
+- **Source photo:** `MFC2.jpg` (in use); `MFC.jpg` is the original. Always center-cropped to square, then circular-masked. Never stretched.
 - **Icons:** none currently. If added later, use stroke-based SVG in `#666663`, 1.5px stroke.
 - **No stock imagery.** No decorative photos. No emoji in prose.
 
